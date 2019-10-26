@@ -18,7 +18,7 @@ from django.contrib import admin
 from app01 import  views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/', views.index),
+    # url(r'^index/', views.index),
     url(r'^home/', views.home),
     url(r'^qgg/', views.qiangungun),
     url(r'^login/', views.login),
@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^ajax/', views.ajax),
     url(r'^search-form$', views.search_form),
     url(r'^search$', views.search),
+    url(r'^index$', views.index),
 
 ]

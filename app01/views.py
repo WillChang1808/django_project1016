@@ -2,8 +2,8 @@ from django.shortcuts import render,HttpResponse,redirect
 from libs.send_msg import send_msg
 
 # Create your views here.
-def index(request):
-    return HttpResponse("Hello Django!")
+# def index(request):
+#     return HttpResponse("Hello Django!")
 
 def home(request):
     return render(request,'home.html')
@@ -59,3 +59,5 @@ def search(request):
         message = '你提交了空表单'
     return render(request,'search.html',{"content":message})
 
+def index(request):
+    return  render(request,'index.html')
