@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+
+</head>
+<body>
+<button id="mybtn" >发送ajax请求</button>
+<div id = "div"></div>
+<div> {{ content }} </div>
+</body>
+ <script>
+        var btn = document.getElementById("mybtn");
+        btn.onclick = function(){
+            //1.创建ajax异步对象
+            var xhr = new XMLHttpRequest();
+            //2.设置url
+            xhr.open("get","http://127.0.0.1:8000/reboot/");
+            //3.发送请求
+            xhr.send();
+            //4.监听事件
+            xhr.onreadystatechange = function (){
+                //5.处理返回的相应结果
+                console.log("服务器响应");
+                {#document.getElementById("div").innerHTML = xhr.responseText#}
+                document.getElementById("div").innerHTML = xhr.responseText
+
+            };
+        }
+
+    </script>
+</html>

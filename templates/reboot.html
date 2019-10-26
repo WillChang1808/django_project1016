@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.min.css">
+    <script src="/static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 class="text-center">此页面用于处理204.53</h1>
+            <h3 class="text-left">请选择要执行的操作：</h3>
+            <form action="" method="POST">
+                <p>1.自助重启204.53:<input type="radio" class="panel-danger" name="action" value="reboot"></p>
+                <p>2.尝试自助重启无效，短信管理员:<input type="radio" class="panel-danger" name="action" value="send_mgs"></p>
+                <div id="myDiv"></div>
+                <input type="submit" onclick="" class="btn btn-success pull-right">
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<div>{{ content }}</div>
+</body>
+</html>
