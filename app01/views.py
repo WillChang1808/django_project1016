@@ -60,4 +60,25 @@ def search(request):
     return render(request,'search.html',{"content":message})
 
 def index(request):
+    if request.method == 'POST':
+        print((request.POST))
+        if request.POST.get('select1'):
+            action = request.POST.get('select1')
+            print(action)
+            return  HttpResponse(action)
+        if request.POST.get('select2'):
+            res = request.POST.get('select2')
+            print("demo前端返回")
+            return HttpResponse(res)
+        if request.POST.get('select3'):
+            action = request.POST.get('select3')
+            print(action)
+            return  HttpResponse(action)
+        if request.POST.get('select4'):
+            res = request.POST.get('select4')
+            print("demo前端返回")
+            return HttpResponse("后端返回:%s" % res)
+
+
+        return HttpResponse('请先选择')
     return  render(request,'index.html')
