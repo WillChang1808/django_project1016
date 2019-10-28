@@ -40,13 +40,13 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="#welcome" class="active">平台使用说明</a></li>
-                            <li><a href="#features">重启204.53</a></li>
-                            <li><a href="#work-process">重启203.112</a></li>
-                            <li><a href="#testimonials">清理Tableau日志</a></li>
-                            <li><a href="#pricing-plans">开发中</a></li>
-                            <li><a href="#blog">开发中</a></li>
-                            <li><a href="#contact-us">开发中</a></li>
+                            <li><a href="#welcome" class="active" style=" font-size:16px">平台使用说明</a></li>
+                            <li><a href="#features" style=" font-size:16px">重启204.53</a></li>
+                            <li><a href="#203112" style=" font-size:16px">重启203.112</a></li>
+                            <li><a href="#tableau" style=" font-size:16px">清理Tableau日志</a></li>
+                            <li><a href="#demo" style=" font-size:16px">Demo</a></li>
+                            <li><a href="#" style=" font-size:16px">开发中</a></li>
+                            <li><a href="#" style=" font-size:16px">开发中</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -77,7 +77,7 @@
     </div>
     <!-- ***** Welcome Area End ***** -->
 
-    <!-- ***** Features Big Item Start ***** -->
+    <!-- ***** Features Big Item1 Start 重启204.53***** -->
     <section class="section padding-top-70 padding-bottom-0" id="features">
         <div class="container">
             <div class="row">
@@ -90,11 +90,10 @@
                         <h2 class="section-title">重启<strong>204.53</strong>,请选择要进行的操作:</h2>
                     </div>
                     <div class="left-text">
-                        重启204.53<input type="radio" id="i1"><br>
-                        重启失败，发短信给管理员<input type="radio" id="i2"><br>
-                        <button id="b1", class="btn-default">确定</button><br><br>
-                        <input type="text" class="col-lg-12 input-group-lg"   placeholder="结果显示区" >
-
+                        重启204.53<input type="radio" name="select1" value="reboot" id="i1"><br>
+                        重启失败，发短信给管理员<input type="radio" name="select1" value="send_sms" id="i2"><br>
+                        <button id="btn1", class="btn-default">确定</button><br><br>
+                        <input type="text" class="col-lg-12 input-group-lg" id="res1" placeholder="结果显示区" >
                     </div>
                 </div>
             </div>
@@ -105,28 +104,84 @@
             </div>
         </div>
     </section>
-    <!-- ***** Features Big Item End ***** -->
+    <!-- ***** Features Big Item1 End 重启204.54***** -->
 
-    <!-- ***** Features Big Item Start ***** -->
-    <section class="section padding-bottom-100">
+    <!-- ***** Features Big Item2 Start 重启203.112***** -->
+    <section class="section padding-bottom-100" id="203112">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+           <div class="row">
+               <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
                     <div class="left-heading">
-                        <h2 class="section-title">We can help you to grow your business</h2>
+                        <h2 class="section-title">重启<strong>203.112</strong>,请选择要进行的操作:</h2>
                     </div>
                     <div class="left-text">
-                        <p>Aenean pretium, ipsum et porttitor auctor, metus ipsum iaculis nisi, a bibendum lectus libero vitae urna. Sed id leo eu dolor luctus congue sed eget ipsum. Nunc nec luctus libero. Etiam quis dolor elit.</p>
+                        重启203.112<input type="radio" name="select2" value="reboot203.112" id="demo1"><br>
+                        重启失败，发短信给管理员<input type="radio" name="select2" value="send_sms" id="demo2"><br>
+                        <button id="btn2", class="btn-default">确定</button><br><br>
+                        <input type="text" class="col-lg-12 input-group-lg" id="res2" placeholder="结果显示区" >
                     </div>
                 </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+               <div class="col-lg-1"></div>  <!--隔开左边的图片和文字*/ -->
+               <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                     <img src="static/assets/images/right-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+           </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item2 End 重启203.112***** -->
+
+      <!-- ***** Features Big Item3 Start 清理tableau日志***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="tableau">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="static/assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>  <!--隔开左边的图片和文字*/ -->
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">清理<strong>钱滚滚Tableau</strong>日志,请选择要进行的操作:</h2>
+                    </div>
+                    <div class="left-text">
+                        清理Tableau日志<input type="radio" name="select3" value="clean_logs" id="i1"><br>
+                        清理失败，发短信给管理员<input type="radio" name="select3" value="send_sms" id="i2"><br>
+                        <button id="btn3", class="btn-default">确定</button><br><br>
+                        <input type="text" class="col-lg-12 input-group-lg" id="res3" placeholder="结果显示区" >
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ***** Features Big Item End ***** -->
+    <!-- ***** Features Big Item3 End 清理tableau日志***** -->
+
+    <!-- ***** Features Big Item4 Start Demo***** -->
+    <section class="section padding-bottom-100" id="demo">
+        <div class="container">
+           <div class="row">
+               <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Demo<strong>展示前后端交互</strong>,请选择要进行的操作:</h2>
+                    </div>
+                    <div class="left-text">
+                        脚踏实地<input type="radio" name="select4" value="脚踏实地" id="demo1"><br>
+                        仰望星空<input type="radio" name="select4" value="仰望星空" id="demo2"><br>
+                        <button id="btn4", class="btn-default">确定</button><br><br>
+                        <input type="text" class="col-lg-12 input-group-lg" id="res4" placeholder="结果显示区" >
+                    </div>
+                </div>
+               <div class="col-lg-1"></div>  <!--隔开左边的图片和文字*/ -->
+               <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="static/assets/images/right-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+           </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item4 End Demo***** -->
 
     <!-- ***** Blog Start ***** -->
     <section class="section" id="blog">
@@ -135,7 +190,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="center-heading">
-                        <h2 class="section-title">Blog Entries</h2>
+                        <h2 class="section-title">专业运维 使命必达</h2>
                     </div>
                 </div>
                 <div class="offset-lg-3 col-lg-6">
@@ -154,12 +209,12 @@
                         </div>
                         <div class="blog-content">
                             <h3>
-                                <a href="#">Vivamus ac vehicula dui</a>
+                                <a href="#">便捷</a>
                             </h3>
                             <div class="text">
-                               Cras aliquet ligula dui, vitae fermentum velit tincidunt id. Praesent eu finibus nunc. Nulla in sagittis eros. Aliquam egestas augue.
+                               致力复杂工作简单话，一"点"完成
                             </div>
-                            <a href="#" class="main-button">Read More</a>
+{#                            <a href="#" class="main-button">Read More</a>#}
                         </div>
                     </div>
                 </div>
@@ -170,12 +225,12 @@
                         </div>
                         <div class="blog-content">
                             <h3>
-                                <a href="#">Phasellus convallis augue</a>
+                                <a href="#">专业</a>
                             </h3>
                             <div class="text">
-                                Aliquam commodo ornare nisl, et scelerisque nisl dignissim ac. Vestibulum finibus urna ut velit venenatis, vel ultrices sapien mattis.
+                                全景熟悉架构，综合技能保驾护航
                             </div>
-                            <a href="#" class="main-button">Read More</a>
+{#                            <a href="#" class="main-button">Read More</a>#}
                         </div>
                     </div>
                 </div>
@@ -186,12 +241,12 @@
                         </div>
                         <div class="blog-content">
                             <h3>
-                                <a href="#">Nam gravida purus non</a>
+                                <a href="#">高效</a>
                             </h3>
                             <div class="text">
-                                Maecenas eu erat vitae dui convallis consequat vel gravida nulla. Vestibulum finibus euismod odio, ut tempus enim varius eu.
+                                高效高质响应各种需求
                             </div>
-                            <a href="#" class="main-button">Read More</a>
+{#                            <a href="#" class="main-button">Read More</a>#}
                         </div>
                     </div>
                 </div>
@@ -199,7 +254,6 @@
         </div>
     </section>
     <!-- ***** Blog End ***** -->
-
 
     
     <!-- ***** Footer Start ***** -->
@@ -239,6 +293,58 @@
     
     <!-- Global Init -->
     <script src="static/assets/js/custom.js"></script>
+    <!-- Ajax -->
+    <script>
+        $('#btn1').click(function () {
+            $.ajax({
+                url:'',
+                type:'POST',
+                data:{select1:$('input[type=radio][name=select1]:checked').val()},
+                success:function(data){
+                    $('#res1').val(data)
+                }
+            })
+        })
+    </script>
+    <script>
+        $('#btn2').click(function () {
+            $.ajax({
+                url:'',
+                type:'POST',
+                data:{select2:$('input[type=radio][name=select2]:checked').val()},
+                success:function(data){
+                    $('#res2').val(data)
+                }
+            })
+
+        })
+    </script>
+    <script>
+        $('#btn3').click(function () {
+            $.ajax({
+                url:'',
+                type:'POST',
+                data:{select3:$('input[type=radio][name=select3]:checked').val()},
+                success:function(data){
+                    $('#res3').val(data)
+                }
+            })
+
+        })
+    </script>
+    <script>
+        $('#btn4').click(function () {
+            $.ajax({
+                url:'',
+                type:'POST',
+                data:{select4:$('input[type=radio][name=select4]:checked').val()},
+                success:function(data){
+                    $('#res4').val(data)
+                }
+            })
+
+        })
+    </script>
 
   </body>
 </html>
