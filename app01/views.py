@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect
 from libs.send_msg import send_msg
+from libs import handle_machine
 
 # Create your views here.
 # def index(request):
@@ -65,20 +66,43 @@ def index(request):
         if request.POST.get('select1'):
             action = request.POST.get('select1')
             print(action)
-            return  HttpResponse(action)
+            if action == 'reboot20453':
+                res1 = handle_machine.reboot20453()
+                if res1 == "重启失败":
+                    return HttpResponse("重启失败，请选择短信通知管理员")
+                else:
+                    return HttpResponse(res1)
+            elif action == 'send_sms':
+                res1 = send_msg(content="重启204.53遇到问题")
+                return HttpResponse(res1)
+
         if request.POST.get('select2'):
-            res = request.POST.get('select2')
-            print("demo前端返回")
-            return HttpResponse(res)
+            action = request.POST.get('select2')
+            print(action)
+            if action == 'reboot203112':
+                res2 = handle_machine.reboot203112()
+                if res2 == "重启失败":
+                    return HttpResponse("重启失败，请选择短信通知管理员")
+                else:
+                    return HttpResponse(res2)
+            elif action == 'send_sms':
+                res2 = send_msg(content="重启203.112遇到问题")
+                return HttpResponse(res2)
         if request.POST.get('select3'):
             action = request.POST.get('select3')
-            print(action)
+            if action == 'clean_logs':
+                res3 = handle_machine.clean_tab_logs()
+                if res3 == "清理失败":
+                    return HttpResponse("清理失败，请选择短信通知管理员")
+                else:
+                    return HttpResponse(res3)
+            elif action == 'send_sms':
+                res3 = send_msg(content="清理tableau日志遇到问题")
+                return HttpResponse(res3)
             return  HttpResponse(action)
         if request.POST.get('select4'):
             res = request.POST.get('select4')
             print("demo前端返回")
             return HttpResponse("后端返回:%s" % res)
-
-
         return HttpResponse('请先选择')
     return  render(request,'index.html')
